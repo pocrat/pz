@@ -9,6 +9,16 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <!--    <meta name="color-scheme" content="dark light">-->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0JYKP9R7V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0JYKP9R7V');
+</script>
     <style>
         html,
         body {
@@ -16,20 +26,31 @@
             margin: 0;
             height: 100%;
         }
-
         body {
             background: url(img/victoria_bc.jpg) no-repeat center / cover;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: verdana, sans-serif;
         }
-
         audio {
             padding-bottom: 20vh;
+        }
+        footer {
+            max-width: 100%;
+            font-size: 12px;
+            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+/*            opacity: 80%;*/
         }
     </style>
 </head>
 
 <body>
     <audio controls src="img/oc.mp3"></audio>
+    <footer>Mt Olympus, Strait of Juan de Fuca, and Victoria, BC / 2018.</footer>
 </body></html>

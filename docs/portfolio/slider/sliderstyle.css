@@ -1,0 +1,214 @@
+#m_imageslider {
+    max-width: var(--w-wraper);
+    margin: 0 auto;
+    height: 80vw;
+    max-height: 600px;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+@media screen and (hover: none) {
+    #m_imageslider {
+/*        overflow-y: scroll;*/
+}
+    .btns {
+/*        display: none;*/
+    }
+}
+
+#m_imageslider ul#slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+/*    left: -200%;*/
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: left 0.3s ease-in-out;
+}
+
+#m_imageslider ul#slider li {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#m_imageslider ul#slider li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#m_imageslider ul#slider li > div {
+    position: absolute;
+    bottom: var(--padding-tb);
+    left: var(--padding-lr);
+    width: 80%;
+    max-width: 640px;
+/*    text-shadow: var(--textshadow);*/
+    color: var(--sw-16);
+}
+
+#m_imageslider ul#slider li > div > .hyperlink {
+    color: unset;
+    display: block;
+}
+
+#m_imageslider ul#slider li > div h3 {
+    font-family: 'noto sans';
+    font-weight: 900;
+    font-size: var(--h1);
+    margin-bottom: var(--margin-xs);
+}
+#m_imageslider .nobreak {
+    position: relative;
+/*    background: red;*/
+}
+
+#m_imageslider .nobreak::after {
+    position: absolute;
+    top: 6px;
+/*    .highlight changes line-height that affects positioning with top margin, so use top instead */
+    margin: 0 0 0 var(--margin-s);
+    content: "chevron_right";
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    color: var(--sw-accent);
+    background-color: var(--sw-16);
+    font-size: 24px;
+    font-family: 'material icons';
+    line-height: 24px;
+    text-align: center;
+    text-shadow: none;
+}
+
+#m_imageslider ul#slider li > div p {
+    font-size: var(--h3);
+    display: none;
+}
+
+@media screen and (min-width: 460px) {
+    #m_imageslider ul#slider li > div p {
+        display: unset;
+    }
+}
+#m_imageslider .highlight {
+/*    text-shadow: none;*/
+/*    line-height: 1.5;*/
+}
+/*
+#m_imageslider .btn-cta {
+    margin-top: var(--margin-m);
+    display: none;
+    text-shadow: none;
+}
+*/
+
+/*btns*/
+.btns {
+    position: absolute;
+    width: 100px;
+    height: 48px;
+    border-radius: 999px;
+    padding: 0 16px;
+    top: 50%;
+    margin-top: -24px;
+    line-height: 48px;
+    cursor: pointer;
+    color: var(--sw-4);
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
+    z-index: 100;
+    user-select: none;
+    transition: all var(--02transition);
+}
+
+.btns:hover {
+    color: var(--sw-16);
+    background-color: var(--sw-accent);
+}
+
+#next {
+    right: -100px;
+}
+
+#previous {
+    left: -100px;
+    text-align: right;
+}
+@media screen and (hover: none) {
+    #next {
+    right: -52px;
+}
+
+#previous {
+    left: -52px;
+}
+}
+#m_imageslider.active #next {
+    right: -52px;
+}
+
+#m_imageslider.active #previous {
+    left: -52px;
+}
+
+#counter {
+    position: absolute;
+    top: calc(var(--padding-tb) + 48px);
+    right: var(--padding-lr);
+    font-weight: 900;
+    text-shadow: var(--textshadow);
+    color: var(--sw-16);
+}
+
+
+
+/*bar*/
+#pagination-wrap {
+    /*
+	min-width:20px;
+	margin-top:350px;
+	margin-left: auto; 
+	margin-right: auto;
+	height:15px;
+	position:relative;
+*/
+    text-align: right;
+    position: absolute;
+/*    width: 100%;*/
+    padding: var(--padding-tb) var(--padding-lr);
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+#pagination-wrap ul li {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.7;
+    transition: all var(--02transition);
+}
+
+#pagination-wrap ul li.active {
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    #pagination-wrap {
+        display: unset;
+    }
+}

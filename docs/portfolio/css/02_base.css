@@ -1,0 +1,218 @@
+:root {
+    --margin-xs: 4px;
+    --margin-s: 8px;
+    --margin-m: 16px;
+    --margin-l: 32px;
+    --margin-xl: 48px;
+    --padding-tb: 32px;
+    --padding-lr: 16px;
+    --padding-section: var(--padding-tb) var(--padding-lr);
+    --w-wrapper: 1600px;
+    --02transition: 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 460px) {
+    :root {
+    --margin-xs: 6px;
+    --margin-s: 12px;
+    --margin-m: 20px;
+    --margin-l: 36px;
+    --margin-xl: 52px;
+    --padding-tb: 32px;
+    --padding-lr: 32px;
+}
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+    --margin-xs: 8px;
+    --margin-s: 16px;
+    --margin-m: 24px;
+    --margin-l: 40px;
+    --margin-xl: 56px;
+    --padding-tb: 48px;
+    --padding-lr: 48px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+    --margin-xs: 10px;
+    --margin-s: 20px;
+    --margin-m: 28px;
+    --margin-l: 44px;
+    --margin-xl: 60px;
+    --padding-tb: 64px;
+    --padding-lr: 96px;
+}
+}
+
+@media screen and (min-width: 1240px) {
+    :root {
+    --margin-xs: 12px;
+    --margin-s: 24px;
+    --margin-m: 32px;
+    --margin-l: 48px;
+    --margin-xl: 64px;
+    --padding-tb: 96px;
+    --padding-lr: 96px;
+}
+}
+@media screen and (min-width: 1500px) {
+    :root {
+    --padding-lr: 10vw;
+}
+}
+
+@media screen and (max-resolution: 140dpi) {
+    :root {
+        --w-wrapper: 1920px;
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*==========  generic settings  ==========*/
+html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+figure {
+    padding: 0;
+    margin: 0;
+}
+figcaption:first-child {
+    margin-bottom: var(--margin-s);
+}
+figcaption:last-child {
+    margin-top: var(--margin-s);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+*:last-child:last-child {
+    margin-bottom: 0;
+}
+.padding {
+    padding: var(--padding-section);
+}
+.w-wrapper {
+    max-width: var(--w-wrapper);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*==========  components settings  ==========*/
+
+.bulletlist li {
+    list-style: disc;
+    margin-left: 16px;
+}
+
+
+/*cta*/
+.btn-cta {
+    display: block;
+    padding: 0.4em 1.2em 0.45em;
+    border-radius: 999px;
+    width: fit-content;
+    width: -moz-fit-content;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--sw-6);
+    background-color: var(--sw-16);
+    transition: background var(--02transition), color var(--02transition);
+}
+.btn-cta.btn-cta:hover, .btn-cta.btn-cta:focus {
+/*    specificity */
+    color: var(--sw-16);
+    background-color: var(--sw-accent);
+}
+.btn-cta::after {
+    content: 'open_in_new';
+    font-family: 'material icons';
+    font-size: 18px;
+    line-height: 1.2;
+    vertical-align: text-bottom;
+    margin-left: -0.9em;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, margin 0.2s 0.1s ease-in-out;
+}
+.btn-cta:hover::after, .btn-cta:focus::after {
+    margin-left: 0.5em;
+    opacity: 1;
+    transition: margin 0.2s ease-in-out, opacity 0.2s 0.1s ease-in-out;
+}
+.btn-url {
+    display: inline-block;
+    padding: 0.4em 1em 0.45em;
+    margin: 0 var(--margin-xs) var(--margin-s) 0;
+    font-size: var(--fine-print);
+    color: var(--sw-8);
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
+}
+.btn-url::after {
+    content: 'open_in_new';
+    font-family: 'material icons';
+    font-size: 16px;
+    line-height: 1.2;
+    vertical-align: sub;
+    margin-left: 0.5em;
+}
+.chip-category {
+    display: inline-block;
+    padding: 0.4em 1em 0.45em;
+    margin: 0 var(--margin-xs) var(--margin-xs) 0;
+    font-size: var(--fine-print);
+    color: var(--sw-4);
+    background-color: var(--sw-14);
+    border-radius: 999px;
+}
+.figimgcover {
+    position: relative;
+    overflow: hidden;
+}
+.figimgcover img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.highlight {
+    color: var(--sw-4);
+    background: var(--sw-16);
+    padding: 4px;
+    line-height: 1.8;
+}
+.card {
+    /*    max-width: 700px;*/
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
+    border-radius: 4px;
+    overflow: hidden;
+    break-inside: avoid;
+}
+.card-img {
+    width: 100%;
+    /*    height: var(--m_more-height);*/
+    /*    height: 200px;*/
+    /*    object-fit: cover;*/
+    transition: var(--02transition);
+}
+.card section {
+    padding: 16px;
+}
