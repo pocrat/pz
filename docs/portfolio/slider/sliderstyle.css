@@ -158,7 +158,7 @@
 
 #counter {
     position: absolute;
-    top: calc(var(--padding-tb) + 48px);
+    top: var(--padding-tb);
     right: var(--padding-lr);
     font-weight: 900;
     text-shadow: var(--textshadow);
