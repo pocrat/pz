@@ -194,9 +194,13 @@ img {
 }
 .highlight {
     color: var(--sw-4);
-    background: var(--sw-16);
+    background-color: var(--sw-16);
     padding: 4px;
     line-height: 1.8;
+}
+.darkcolor .highlight {
+    color: var(--sw-16);
+    background-color: var(--sw-4);
 }
 .card {
     /*    max-width: 700px;*/

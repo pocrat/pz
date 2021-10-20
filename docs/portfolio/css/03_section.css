@@ -155,7 +155,9 @@
     transform: scale(1.02);
     filter: brightness(0.8);
 }
-
+.m_featured :is(.darkcolor:hover, .darkcolor:focus-within) > img {
+/*    filter: brightness(1.1);*/
+}
 .m_featured figcaption {
     position: absolute;
     bottom: 0;
@@ -180,6 +182,10 @@
 .m_featured .chip-category {
     background-color: var(--sw-16);
 }
+.m_featured .darkcolor .chip-category {
+    color: var(--sw-16);
+    background-color: var(--sw-4);
+}
 
 .m_featured figure:hover .info,
 .m_featured figure:focus-within .info {
@@ -190,6 +196,10 @@
 .m_featured .btn-cta {
     margin: var(--margin-m) 0 0 auto;
     box-shadow: var(--boxshadow-card);
+}
+
+.m_featured .darkcolor .btn-cta {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (hover: none) {
