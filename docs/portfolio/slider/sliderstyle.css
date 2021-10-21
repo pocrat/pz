@@ -58,8 +58,7 @@
 
 #m_imageslider ul#slider li > div h3 {
     font-family: 'noto sans';
-    font-weight: 900;
-    font-size: var(--h1);
+    font-weight: 700;
     margin-bottom: var(--margin-xs);
 }
 #m_imageslider .nobreak {
@@ -86,13 +85,16 @@
 }
 
 #m_imageslider ul#slider li > div p {
-    font-size: var(--h3);
     display: none;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 768px) {
+    #m_imageslider ul#slider li > div h3 {
+    font-size: var(--h1);
+}
     #m_imageslider ul#slider li > div p {
         display: unset;
+        font-size: var(--h3);
     }
 }
 #m_imageslider .highlight {
