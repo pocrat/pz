@@ -123,7 +123,7 @@
     color: var(--sw-4);
     background-color: var(--sw-16);
     box-shadow: var(--boxshadow-card);
-    z-index: 100;
+    z-index: 80;
     user-select: none;
     transition: all var(--02transition);
 }

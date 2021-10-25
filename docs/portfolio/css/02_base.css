@@ -200,7 +200,7 @@ img {
 }
 .darkcolor .highlight {
     color: var(--sw-16);
-    background-color: var(--sw-4);
+    background-color: var(--sw-2);
 }
 .card {
     /*    max-width: 700px;*/

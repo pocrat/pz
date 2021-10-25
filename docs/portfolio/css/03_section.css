@@ -20,6 +20,7 @@
         --m_story-cardmargintop: var(--margin-xs);
         --m_detailimg-grid-3col: 1fr 1fr;
         --m_detailimg-grid-vp-1111: 1fr 1fr;
+        --m_detailimg-grid-itemspan2: span 2;
     }
 }
 
@@ -184,7 +185,7 @@
 }
 .m_featured .darkcolor .chip-category {
     color: var(--sw-16);
-    background-color: var(--sw-4);
+    background-color: var(--sw-2);
 }
 
 .m_featured figure:hover .info,
@@ -537,5 +538,6 @@
     grid-column: 1 / -1;
 }
 .grid-item-spancol2 {
-    grid-column: span 2;
+    grid-column: var(--m_detailimg-grid-itemspan2);
+/*    min-width 460px */
 }
