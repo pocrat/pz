@@ -2,6 +2,7 @@
     --m_nav-text: none;
     --m_featured-height: 360px;
     --m_featured-gridgap: var(--margin-m);
+    --m_featured-h3: var(--h3);
     --m_more-col123: 300px 3;
     --m_listgrid-grid123: repeat(auto-fit, minmax(300px, 1fr));
     --m_gallery-grid23456: repeat(2, 1fr);
@@ -42,6 +43,7 @@
 @media screen and (min-width: 1024px) {
     :root {
         --m_featured-height: 440px;
+        --m_featured-h3: var(--h2);
         --m_listgrid-grid123: repeat(2, 1fr);
         --m_gallery-grid23456: repeat(5, 1fr);
         --m_gallery-spare: none;
@@ -168,6 +170,7 @@
 
 .m_featured h3 {
     margin: var(--margin-s) 0;
+    font-size: var(--m_featured-h3);
 }
 
 .m_featured .info {
