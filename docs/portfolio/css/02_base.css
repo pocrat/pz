@@ -70,6 +70,19 @@
     }
 }
 
+@media print {
+    :root {
+    --margin-xs: 0.025in;
+    --margin-s: 0.05in;
+    --margin-m: 0.075in;
+    --margin-l: 0.1in;
+    --margin-xl: 0.125in;
+    --padding-tb: 0.2in;
+    --padding-lr: 0.2in;
+    --padding-section: var(--padding-tb) 0in;
+    --w-wrapper: unset;
+}
+}
 
 html {
     box-sizing: border-box;
@@ -219,4 +232,19 @@ img {
 }
 .card section {
     padding: 16px;
+}
+
+@media print {
+    figcaption {
+        background: none !important;
+    }
+    .btn-cta {
+        display: none;
+    }
+    .btn-url {
+        display: none;
+    }
+    .card section {
+        padding: var(--margin-m)
+    }
 }
