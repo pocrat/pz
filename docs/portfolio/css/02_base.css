@@ -43,11 +43,11 @@
     --margin-l: 44px;
     --margin-xl: 60px;
     --padding-tb: 64px;
-    --padding-lr: 96px;
+    --padding-lr: 64px;
 }
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1280px) {
     :root {
     --margin-xs: 12px;
     --margin-s: 24px;
@@ -60,7 +60,7 @@
 }
 @media screen and (min-width: 1500px) {
     :root {
-    --padding-lr: 10vw;
+    --padding-lr: 128px;
 }
 }
 

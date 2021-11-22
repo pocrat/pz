@@ -509,14 +509,10 @@
 .m_detailimg-list img {
     margin: 0 auto;
 }
+
 .imgmarginbtm img {
     margin-bottom: var(--margin-xs);
 }
-/*
-.m_detailimg-list figcaption:last-child {
-    margin-top: var(--margin-s);
-}
-*/
 
 .m_detailimg-grid {
     padding: var(--padding-section); 
@@ -526,11 +522,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-/*
-.m_detailimg-grid figcaption:first-child {
-    margin-bottom: var(--margin-s);
-}
-*/
+
 .grid-300px {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

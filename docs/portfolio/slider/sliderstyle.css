@@ -1,5 +1,5 @@
 #m_imageslider {
-    max-width: var(--w-wraper);
+    max-width: calc(var(--w-wrapper) + 600px);
     margin: 0 auto;
     height: 80vw;
     max-height: 600px;
