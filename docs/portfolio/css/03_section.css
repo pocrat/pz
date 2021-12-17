@@ -3,6 +3,7 @@
     --m_featured-height: 360px;
     --m_featured-gridgap: var(--margin-m);
     --m_featured-h3: var(--h3);
+    --m_featured-padding: 32px 16px;
     --m_more-col123: 300px 3;
     --m_listgrid-grid123: repeat(auto-fit, minmax(300px, 1fr));
     --m_gallery-grid23456: repeat(2, 1fr);
@@ -59,6 +60,13 @@
         --m_gallery-grid23456: repeat(6, 1fr);
         --m_gallery-spare: unset;
         --m_story-cardimgmaxh: 240px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    :root {
+        --m_featured-height: 640px;
+        --m_featured-padding: 48px;
     }
 }
 
@@ -192,7 +200,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 32px 16px;
+    padding: var(--m_featured-padding);
 }
 
 .m_featured h3 {
@@ -405,7 +413,7 @@
 
 .m_story .profile a {
     position: relative;
-    padding-left: 24px;
+    padding-left: 32px;
     margin: 0 var(--margin-s);
     white-space: nowrap;
     /*    prevents icon being left alone in narrow viewport*/
@@ -418,8 +426,8 @@
     left: 0;
     color: currentColor;
     font-family: 'material icons';
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 1;
 }
 
 @media screen and (min-width: 1024px) {

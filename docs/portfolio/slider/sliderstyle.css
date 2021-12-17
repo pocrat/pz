@@ -1,8 +1,16 @@
+:root {
+    --slider-height: 600px;
+}
+@media screen and (min-width: 2000px) {
+    :root {
+    --slider-height: 760px;
+}
+}
 #m_imageslider {
     max-width: calc(var(--w-wrapper) + 600px);
     margin: 0 auto;
     height: 80vw;
-    max-height: 600px;
+    max-height: var(--slider-height);
     position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
