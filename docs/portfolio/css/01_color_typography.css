@@ -177,6 +177,10 @@ sup {
 .textshadow-white {
     text-shadow: var(--textshadow-white);
 }
+.inlinelink {
+    text-decoration: underline;
+    font-style: italic;
+}
 /*==========  .class alignment  ==========*/
 .center {
     text-align: center;
