@@ -2,6 +2,8 @@
 
 /*==========  color custom properties  ==========*/
 :root {
+    --sw-accent: #50afea;
+    --sw-accent50trans: #50afea20;
     --sw-0: #000000;
     --sw-0-5: #080808;
     --sw-1: #101010;
@@ -35,14 +37,15 @@
     --sw-15: #f0f0f0;
     --sw-15-5: #f8f8f8;
     --sw-16: #ffffff;
+    
     --50transparent: #ffffff80;
     --70transparent: #ffffffbb;
     --100transparent: #ffffffff;
+    
     --boxshadow-card: 0px 1px 3px rgba(0, 0, 0, 0.15);
     --textshadow: rgba(0,0,0,0.4) 1px 1px 1px;
     --textshadow-white: var(--sw-16) -1px -1px 0px;
-    --sw-accent: #50afea;
-    --sw-accent50trans: #50afea20;
+    
 }
 
 .dropshadow {
@@ -51,7 +54,10 @@
 
 /*==========  text custom properties  ==========*/
 :root {
-    --base-size: 14px;
+/*    --base-size: 14px;*/
+    --base-size: 15px;
+/*    --base-size: 16px;*/
+    --line-height: 1.5;
     --scale-ratio: 1.2;
     --fine-print: calc(var(--base-size) / var(--scale-ratio));
     /*    --h5: calc(var(--base-size) * var(--scale-ratio));*/
@@ -61,10 +67,27 @@
     --h1: calc(var(--h2) * var(--scale-ratio));
 }
 
+@media screen and (min-width: 1800px) {
+    :root {
+        --base-size: 16px;
+    }
+}
+
+@media print {
+    :root {
+        --base-size: 8pt;
+        --line-height: 1.4;
+        --scale-ratio: 1.1;
+    }
+}
+
+
+
+
 /*==========  generic block type settings  ==========*/
 html {
     color: var(--sw-4);
-    line-height: 1.5;
+    line-height: var(--line-height);
 }
 
 body {
@@ -104,17 +127,6 @@ footer > p {
 
 p {
     margin: 0 0 4px;
-}
-
-@media print {
-    :root {
-        --base-size: 8pt;
-        --scale-ratio: 1.1;
-    }
-    
-    html {
-        line-height: 1.4;
-    }
 }
 
 /*==========  generic inline type settings  ==========*/

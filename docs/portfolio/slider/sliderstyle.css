@@ -54,7 +54,7 @@
     bottom: var(--padding-tb);
     left: var(--padding-lr);
     width: 80%;
-    max-width: 640px;
+    max-width: 680px;
 /*    text-shadow: var(--textshadow);*/
     color: var(--sw-16);
 }

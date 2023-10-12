@@ -1,14 +1,25 @@
 :root {
+    --space-2px: 2px;
+    --space-4px: 4px;
+    --space-8px: 8px;
+    --space-16px: 16px;
+    
     --margin-xs: 4px;
     --margin-s: 8px;
     --margin-m: 16px;
     --margin-l: 32px;
     --margin-xl: 48px;
+    
     --padding-tb: 32px;
     --padding-lr: 16px;
     --padding-section: var(--padding-tb) var(--padding-lr);
+    
     --w-wrapper: 1600px;
+    
     --02transition: 0.2s ease-in-out;
+    --03transition: 0.3s ease-in-out;
+    
+    --card-padding: 16px;
 }
 
 @media screen and (min-width: 460px) {
@@ -18,6 +29,7 @@
     --margin-m: 20px;
     --margin-l: 36px;
     --margin-xl: 52px;
+        
     --padding-tb: 32px;
     --padding-lr: 32px;
 }
@@ -30,6 +42,7 @@
     --margin-m: 24px;
     --margin-l: 40px;
     --margin-xl: 56px;
+        
     --padding-tb: 48px;
     --padding-lr: 48px;
 }
@@ -42,6 +55,7 @@
     --margin-m: 28px;
     --margin-l: 44px;
     --margin-xl: 60px;
+        
     --padding-tb: 64px;
     --padding-lr: 64px;
 }
@@ -54,19 +68,38 @@
     --margin-m: 32px;
     --margin-l: 48px;
     --margin-xl: 64px;
-    --padding-tb: 96px;
-    --padding-lr: 96px;
+        
+    --padding-tb: 80px;
+    --padding-lr: 80px;
 }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1600px) {
     :root {
-    --padding-lr: 128px;
+    --padding-lr: 96px;
 }
 }
 
 @media screen and (max-resolution: 140dpi) {
     :root {
-        --w-wrapper: 1920px;
+/*        --w-wrapper: 1920px;*/
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    :root {
+        --margin-xs: 14px;
+        --card-padding: 18px;
+    }
+}
+
+@media screen and (min-width: 2160px) {
+    :root {
+        --space-2px: 3px;
+        --space-4px: 5px;
+        --space-8px: 10px;
+        --space-16px: 20px;
+        
+/*        --w-wrapper: 1920px;*/
     }
 }
 
@@ -77,9 +110,11 @@
     --margin-m: 0.075in;
     --margin-l: 0.1in;
     --margin-xl: 0.125in;
+        
     --padding-tb: 0.2in;
     --padding-lr: 0.2in;
     --padding-section: var(--padding-tb) 0in;
+        
     --w-wrapper: unset;
 }
 }
@@ -156,9 +191,11 @@ img {
 }
 .btn-cta::after {
     content: 'open_in_new';
+    display: inline-block;
     font-family: 'material icons';
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1;
+    padding-bottom: 2px;
     vertical-align: text-bottom;
     margin-left: -0.9em;
     opacity: 0;
@@ -232,6 +269,7 @@ img {
 }
 .card section {
     padding: 16px;
+    padding: var(--card-padding);
 }
 
 @media print {
