@@ -11,6 +11,8 @@
     --m_story-cardmargintop: var(--margin-s);
     --m_detailimg-grid-vp-itemspancol: 1 / -1;
     --m_detailimg-grid-vp-xls: 3fr 2fr 1fr;
+    
+    --detail_scope-dt-margin: var(--sp_px-s) 0 8px;
 }
 
 @media screen and (min-width: 460px) {
@@ -26,6 +28,10 @@
         
         --detail_3col-grid: repeat(2, 1fr);
         --detail_3col-span: span 2;
+        
+        --detail_scope-display: grid;
+        --detail_scope-grid: fit-content(30%) 1fr;
+        --detail_scope-dt-margin: 0;
     }
 }
 
@@ -593,10 +599,11 @@
     font-size: var(--base-size);
     font-weight: bold;
     margin: 0;
+    padding: 1em;
 }
 .m_itemsection h3 {
     font-family: inherit;
-    margin-bottom: var(--margin-s);
+    margin-bottom: var(--sp_px-s);
 }
 .m_itemsection figure {
     margin-bottom: var(--margin-l);
@@ -607,21 +614,24 @@
 .m_itemsection .detail_3col{
     display: grid;
     grid-template-columns: var(--detail_3col-grid);
-    grid-gap: var(--margin-m);
+    grid-gap: var(--margin-m) var(--margin-l);
 }
 .m_itemsection .detail_3col :first-child {
     grid-column: var(--detail_3col-span);
 }
 
 .m_itemsection .detail_scope {
-    display: grid;
-    grid-template-columns: fit-content(30%) 1fr;
-    grid-gap: var(--margin-xs) var(--margin-s);
+    display: var(--detail_scope-display, block);
+    grid-template-columns: var(--detail_scope-grid);
+    grid-gap: 1.6em;
 /*    max-width: 800px;*/
 }
 .m_itemsection .detail_scope dt {
     font-weight: bold;
-    text-align: right;
+margin: var(--detail_scope-dt-margin);
+}
+.m_itemsection .detail_scope dd P:not(:last-child){
+margin-bottom: 0.4em;
 }
 
 
@@ -630,7 +640,7 @@
     line-height: 1.4;
 /*        display: grid;*/
     grid-template-columns: var(--detail_links);
-    grid-gap: var(--margin-s) var(--margin-l);
+    grid-gap: var(--margin-m) var(--margin-l);
     display: flex;
     flex-wrap: wrap;
 }

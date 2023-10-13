@@ -10,6 +10,8 @@
     --margin-l: 32px;
     --margin-xl: 48px;
     
+    --sp_px-s: 16px;
+    
     --padding-tb: 32px;
     --padding-lr: 16px;
     --padding-section: var(--padding-tb) var(--padding-lr);
@@ -30,6 +32,8 @@
     --margin-l: 36px;
     --margin-xl: 52px;
         
+    --sp_px-s: 18px;
+        
     --padding-tb: 32px;
     --padding-lr: 32px;
 }
@@ -42,6 +46,8 @@
     --margin-m: 24px;
     --margin-l: 40px;
     --margin-xl: 56px;
+        
+    --sp_px-s: 20px;
         
     --padding-tb: 48px;
     --padding-lr: 48px;
@@ -56,6 +62,8 @@
     --margin-l: 44px;
     --margin-xl: 60px;
         
+    --sp_px-s: 22px;
+        
     --padding-tb: 64px;
     --padding-lr: 64px;
 }
@@ -68,6 +76,8 @@
     --margin-m: 32px;
     --margin-l: 48px;
     --margin-xl: 64px;
+        
+    --sp_px-s: 24px;
         
     --padding-tb: 80px;
     --padding-lr: 80px;
