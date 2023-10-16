@@ -62,7 +62,7 @@
         --m_story-flex1024: flex;
         --m_story-cardimgmaxh: 230px;
         
-        --detail_3col-grid: repeat(4, 1fr);
+        --detail_3col-grid: minmax(auto, 350px) minmax(auto, 350px) max-content minmax(200px, max-content);
         --detail_links: repeat(3, 1fr);
     }
 }
@@ -510,11 +510,11 @@
 }
 
 .m_detail .time {
-    flex: 0 1 150px;
+    flex: 0 1 auto;
 }
 
 .m_detail .credit {
-    flex: 0 1 300px;
+    flex: 1 1 300px;
 }
 
 .m_detail .keywords {
