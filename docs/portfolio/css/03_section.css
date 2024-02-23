@@ -12,7 +12,7 @@
     --m_detailimg-grid-vp-itemspancol: 1 / -1;
     --m_detailimg-grid-vp-xls: 3fr 2fr 1fr;
     
-    --detail_scope-dt-margin: var(--sp_px-s) 0 8px;
+    --detail_scope-dt-margin: var(--sp_px-s) 0 6px;
 }
 
 @media screen and (min-width: 460px) {
