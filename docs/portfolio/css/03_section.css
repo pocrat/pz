@@ -598,8 +598,15 @@
 .m_itemsection .btn-url{
     font-size: var(--base-size);
     font-weight: bold;
+    color: var(--sw-1);
     margin: 0;
     padding: 1em;
+    transition: background-color var(--02transition);
+    
+    &:is(:focus, :hover) {
+        background-color: var(--sw-accent);
+        color: var(--sw-16);
+    }
 }
 .m_itemsection h3 {
     font-family: inherit;
@@ -627,8 +634,9 @@
 /*    max-width: 800px;*/
 }
 .m_itemsection .detail_scope dt {
+    font-size: 14px;
     font-weight: bold;
-margin: var(--detail_scope-dt-margin);
+    margin: var(--detail_scope-dt-margin);
 }
 .m_itemsection .detail_scope dd P:not(:last-child){
 margin-bottom: 0.4em;

@@ -100,6 +100,7 @@ h1 {
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 var(--margin-xs);
+    color: var(--sw-1);
 }
 
 h2 {
@@ -107,6 +108,7 @@ h2 {
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 var(--margin-l);
+    color: var(--sw-1);
 }
 
 h3 {
@@ -115,6 +117,7 @@ h3 {
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 8px;
+    color: var(--sw-1);
 }
 
 h4 {
