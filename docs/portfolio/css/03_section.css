@@ -722,7 +722,7 @@ margin-bottom: 0.4em;
         display: none;
     }
     .m_nav a::after {
-        content: " (http://suli.ca/portfolio)"
+        content: " (http://suli.ca/pfolio)"
     }
     #m_imageslider {
         display: none;
